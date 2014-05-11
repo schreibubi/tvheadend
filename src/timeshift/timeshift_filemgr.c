@@ -61,7 +61,6 @@ static void* timeshift_reaper_callback ( void *p )
       continue;
     }
     TAILQ_REMOVE(&timeshift_reaper_list, tsf, link);
-    pthread_mutex_unlock(&timeshift_reaper_lock);
 
     tvhtrace("timeshift", "remove file %s", tsf->path);
 
